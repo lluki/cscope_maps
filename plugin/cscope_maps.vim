@@ -37,9 +37,9 @@ if has("cscope")
     " if you want the reverse search order.
     set csto=0
 
-    " reset databases to prevent complains about adding the same db multiple
+    " kill all connections to prevent complains about adding the same db multiple
     " times -- simu, 2013/02/20
-    cs reset
+    cs kill -1
     " add any cscope database in current directory
     if filereadable("cscope.out")
         cs add cscope.out
